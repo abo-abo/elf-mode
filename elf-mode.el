@@ -49,7 +49,7 @@
           (insert-file-contents (buffer-file-name))
           (setq elf-mode nil))
       (setq elf-mode t)
-      (delete-region (point-min) (point-max))
+      (erase-buffer)
       (insert (shell-command-to-string
                (format "readelf --syms %s" (buffer-file-name)))))
     (set-buffer-modified-p nil)
