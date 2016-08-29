@@ -56,3 +56,4 @@
     (read-only-mode 1)))
 
 (provide 'elf-mode)
+;;; elf-mode.el ends here
