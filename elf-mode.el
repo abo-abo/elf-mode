@@ -3,7 +3,7 @@
 ;; Copyright (C) 2016 Oleh Krehel
 
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
-;; URL: https://github.com/abo-abo/swiper
+;; URL: https://github.com/abo-abo/elf-mode
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: matching
