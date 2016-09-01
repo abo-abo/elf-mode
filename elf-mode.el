@@ -51,7 +51,7 @@
       (setq elf-mode t)
       (erase-buffer)
       (insert (shell-command-to-string
-               (format "readelf --syms %s" (buffer-file-name)))))
+               (format "readelf --syms -W %s" (buffer-file-name)))))
     (set-buffer-modified-p nil)
     (read-only-mode 1)))
 
