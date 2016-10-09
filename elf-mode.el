@@ -39,6 +39,9 @@
   "Make `elf-mode' get called automatically for binaries."
   (add-to-list 'magic-mode-alist (cons "ELF" 'elf-mode)))
 
+(defvar elf-mode-command "readelf --syms -W %s"
+  "The shell command to use for `elf-mode'.")
+
 ;;;###autoload
 (defun elf-mode ()
   (interactive)
@@ -51,7 +54,7 @@
       (setq elf-mode t)
       (erase-buffer)
       (insert (shell-command-to-string
-               (format "readelf --syms -W %s" (buffer-file-name)))))
+               (format elf-mode-command (buffer-file-name)))))
     (set-buffer-modified-p nil)
     (read-only-mode 1)))
 
